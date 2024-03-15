@@ -10,7 +10,7 @@
         body{
             text-align: center;
         }
-        .yesno{
+        #yesno{
             font-size: xx-large;
         }
     </style>
@@ -18,18 +18,30 @@
     is it march 16th?
 
 
-    <a class="yesno"> YES </a>
+    <a id="yesno"></a>
+
+    <button id="btn">click me</button>
 
 
     <script>
+        const bttn = document.getElementById("btn");
         const date = new Date();
-        console.log(date)
+        console.log(date);
 
         let day = date.getDate();
         console.log(day);
 
         const month = date.getMonth();
         console.log(month);
+
+        if (day == 16 && month == 3){
+            document.getElementById("yesno").innerHTML = "YES";
+            bttn.disabled = "disabled";
+            bttn.style.opacity = 0;
+        }
+        else{
+            document.getElementById("yesno").innerHTML = "NO";
+        }
     </script>
 </body>
 </html>
