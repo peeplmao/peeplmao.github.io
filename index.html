@@ -13,18 +13,44 @@
         #yesno{
             font-size: xx-large;
         }
+        #imag{
+            display: none;
+        }
+        #texto{
+            display: none;
+        }
     </style>
 
-    is it march 16th?
+    <div>it march 16th?
 
 
     <a id="yesno"></a>
+    <button onclick="aparece()" id="btn">click me</button>
+    </div>
 
-    <button id="btn">click me</button>
+    <div id="imag">
+    <img src="joao.jpg">
+    </div>
+
+    <div id="texto">
+        <h1>HAPPY BIRTHDAY</h1> 
+        <p> hi, yu and i know im not the best at writing texts but i'll try my best :p.
+            since you came in my life (weird wording i know), you made it so much better and i love you so much for it.
+            18 is a big number and i know you're gonna be stressed cus of the responsabilities but i assure you ill be here every step of the way
+            you mean the world to me, and i just wanna say thank you and i love you.
+            also, im a bit broke so i dont have money to buy yu gift, but when i get job i buy yu 1 million gifts okey?
+
+            im always here for you. always.
+
+            i love you so so much
+
+            
+        </p>
+    </div>
+    
 
 
     <script>
-        const bttn = document.getElementById("btn");
         const date = new Date();
         console.log(date);
 
@@ -34,12 +60,15 @@
         const month = date.getMonth();
         console.log(month);
 
-        if (day == 16 && month == 3){
+        if (day == 16 && month == 2){
             document.getElementById("yesno").innerHTML = "YES";
-            bttn.style.visibility = "hidden"
-        }
-        else{
+        }else{
             document.getElementById("yesno").innerHTML = "NO";
+            document.getElementById("btn").style.display = "none";
+        }
+        function aparece(){
+            document.getElementById("imag").style.display = "unset";
+            document.getElementById("texto").style.display = "unset";
         }
     </script>
 </body>
